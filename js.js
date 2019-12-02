@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
 
-
     /**
      * 将前端选中的文件传输到后端
+     * 时间：2019.12.02.16.44
      */
     $("#btn_getFilePath").change(function(){
 
@@ -56,7 +56,5 @@ $(document).ready(function () {
     function buf2hex(buffer) { // buffer is an ArrayBuffer
         return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
     }
-
-
 
 });
