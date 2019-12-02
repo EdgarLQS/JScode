@@ -23,7 +23,7 @@
           
                 <!-- 出现控制框，得到该控制里面选择的文件的绝对路径 -->
                 <p id="getFile">
-                    <input type="file" onclick="tranferFileToBack()" style="width: 220px" multiple="multiple">
+                    <input type="file" id="btn_getFilePath" style="width: 220px" multiple="multiple">
                 </p>
 
                 <!-- 根据上面得到的绝对路径，采用 ajax 的方式将路径传回给后端，在后端实现文件的 区块链和hdfs的 联合存储 -->
