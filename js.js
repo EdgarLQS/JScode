@@ -33,20 +33,20 @@ $(document).ready(function () {
                     "fileNameExtream": suffix
                 };
                 //  添加ajax 请求，将数据返回到后端
-                // $.ajax({
-                //     type: 'post',
-                //     contentType: "application/json", //后端Jersey采用相应的接受参数即可
-                //     url: 'http://localhost:8899/bcgis/storage/cooperativeStorage/test',
-                //     data: JSON.stringify(postData),
-                //     success: function (data) {
-                //         // console.log('data: ' + JSON.stringify(data));
-                //         console.log(data);
-                //     },
-                //     error: function (err) {
-                //         console.log('err: ');
-                //         console.log(JSON.stringify(err));
-                //     }
-                // });
+                $.ajax({
+                    type: 'post',
+                    contentType: "application/json", //后端Jersey采用相应的接受参数即可
+                    url: 'http://localhost:8899/bcgis/storage/cooperativeStorage/test',
+                    data: JSON.stringify(postData),
+                    success: function (data) {
+                        // console.log('data: ' + JSON.stringify(data));
+                        console.log(JSON.stringify(data));
+                    },
+                    error: function (err) {
+                        console.log('err: ');
+                        console.log(JSON.stringify(err));
+                    }
+                });
 
             }
         }
@@ -56,5 +56,11 @@ $(document).ready(function () {
     function buf2hex(buffer) { // buffer is an ArrayBuffer
         return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
     }
+
+    //test
+    function test111(){
+        return "this is test";
+    }
+
 
 });
