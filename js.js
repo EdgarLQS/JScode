@@ -5,9 +5,9 @@ $(document).ready(function () {
      * 将前端选中的文件传输到后端
      * 时间：2019.12.02.16.44
      */
-    $("#btn_getFilePath").change(function(){
+    $("#btn_getFilePath").change(function () {
 
-  
+
         var objFiles = document.getElementById("btn_getFilePath");
         var fileSize = objFiles.files.length;
 
@@ -57,10 +57,27 @@ $(document).ready(function () {
         return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
     }
 
-    //test
-    function test111(){
-        return "this is test";
-    }
+    $("#Submit").on('click', function submitForm() {
+        var form = new FormData(document.getElementById("form_Form"));
+        alert('姓名：' + form_Form.textfield.value + '\n密码：' + form_Form.password.value);
 
+        // 采用 ajax 发送表单信息
+
+        // $.ajax({
+        //     url: "http://172.16.15.66:8081/server_war_exploded/webapi/blockchain",
+        //     type: "post",
+        //     data: form,
+        //     processData:false,
+        //     contentType:false,
+        //     success:function(data){
+        //         window.clearInterval(2);
+        //         console.log(data);
+        //     },
+        //     error:function(e){
+        //         alert("错误！！");
+        //         window.clearInterval(2);
+        //     }
+        // });
+    });
 
 });
