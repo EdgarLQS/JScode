@@ -10,24 +10,47 @@
 </head>
 
 <body>
-    <!-- 定义一个表单 -->
+    <!-- 定义一个表单  </fieldset>设置可以让标签等居中显示 -->
     <form id="form_Form" name="form1" method="post" action="">
-
-        <p>
-            <label>姓名：</label>
-            <input type="text" name="textfield" />
-        </p>
-
-        <p>
-            <label>密码：</label>
-            <input tupe="password" id="password" name="textfield2" />
-        </p>
-
-        <p>
-            <input type="button" id="Submit" value="查看姓名和密码" />
-            <!-- onclick="javascript:alert('姓名：' + form1.textfield.value + '\n密码：' + form1.password.value)" /> -->
-        </p>
+        <fieldset>
+            <p>
+                <label>姓名：</label>
+                <input type="text" name="textfield" />
+            </p>
+            <p>
+                <label>密码：</label>
+                <input tupe="password" id="password" name="textfield2" />
+            </p>
+            <p>
+                <input type="button" id="Submit" value="查看姓名和密码" />
+                <!-- onclick="javascript:alert('姓名：' + form1.textfield.value + '\n密码：' + form1.password.value)" /> -->
+            </p>
+        </fieldset>
     </form>
+
+
+    <!-- 表单2 -->
+    <form id="publish_form" enctype="multipart/form-data">
+        <fieldset>
+            <p>
+                <label for="input_modelid">输入名称: </label>
+                <input type="text" id="input_modelid" name="modelid" value=""></input>
+            </p>
+            <p>
+                <label for="btn_file">选择文件: </label>
+                <input type="file" id="btn_file" name="file" multiple="multiple">
+            </p>
+            <p>
+                <input type="button" value="提交" id="btn_submit" />
+            </p>
+        </fieldset>
+    </form>
+
+
 </body>
 
 </html>
+
+<script>
+
+</script>

@@ -80,4 +80,23 @@ $(document).ready(function () {
         // });
     });
 
+    $("#btn_submit").on('click', function submitForm() {
+        var form = new FormData(document.getElementById("publish_form"));
+        // $.ajax({
+        //     url: "http://localhost:8081/server_war_exploded/webapi/blockchain",
+        //     type: "post",
+        //     data: form,
+        //     processData: false,
+        //     contentType: false,
+        //     success: function (data) {
+        //         alert(data);
+        //         // console.log(data);
+        //         // console.log('data: ' + JSON.stringify(data));
+        //     },
+        //     error: function (e) {
+        //         // alert("错误！！");
+        //     }
+        // });
+    });
+
 });
